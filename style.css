@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff8ee;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  header {
+    background: #18160a;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    color: #e38f10;
+  }
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  .hero {
+    background: url('img/banner.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .hero h2 {
+    font-size: 3rem;
+    color: #fdcb00fd;
+  }
+  .sobre, .produtos, .contato {
+    padding: 60px 0;
+  }
+   p {
+    color: white;
+    padding-left: 60px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: Arial;
+  }
+  .destaque-h2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('h2.png'); /* Caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .conteudo-h2 h2 {
+    color: #ffbd09cb; /* amarelo NSP */
+    font-size: 4rem; /* um pouco menor */
+    font-weight: 600; /* peso mais leve */
+    line-height: 1.2; /* diminui o espaço entre as linhas */
+    letter-spacing: 1px; /* melhora a leitura */
+    margin: 0;
+    padding-left: 60px;
+    text-align: left;
+    max-width: 800px; /* evita que o texto fique muito largo */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    font-family: 'Merriweather', serif;
+  }
+  
+  
+
+  /*.owl-carousel .item img {
+    width: 100%;
+    border-radius: 10px;
+  }*/
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d1d1cbd;
+    padding: 10px 20px;
+    position: fixed;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #d68700;
+  }
+  
+  .hamburguer {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fffefe;
+    font-weight: bold;
+  }
+  
+  /* Responsivo: menu hamburguer */
+  @media (max-width: 768px) {
+    .hamburguer {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #00000079;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  
+    nav.show {
+      display: flex;
+    }
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-img {
+    height: 40px; /* ajuste o tamanho como quiser */
+  }
+  
+  .logo-text {
+    font-weight: bold;
+    font-size: 24px;
+    color: #d68600;
+  }
+  /* Estilos para o botão "Fale Conosco" do WhatsApp */
+.botao-whatsapp {
+  display: inline-flex; /* Alinha o ícone e o texto horizontalmente */
+  align-items: center; /* Centraliza verticalmente o ícone e o texto */
+  background-color: #25D366; /* Cor verde do WhatsApp */
+  color: #fff; /* Texto branco */
+  padding: 15px 30px; /* Espaçamento interno */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  margin-top: 20px; /* Espaçamento acima do botão */
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.botao-whatsapp:hover {
+  background-color: #128C7E; /* Tom de verde mais escuro no hover */
+}
+
+.whatsapp-icon {
+  width: 24px; /* Largura do ícone do WhatsApp */
+  height: 24px; /* Altura do ícone do WhatsApp */
+  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+.sobre h3 {
+  color: #e38f10; /* Altere para a cor desejada (tom de laranja NSP) */
+  font-size: 2.5rem; /* Ajuste o tamanho da fonte se necessário */
+  margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+  font-weight: bold; /* Deixa o título em negrito (opcional) */
+  text-align: center;
+}
+
+.sobre p {
+  color: #333; /* Cor do texto do parágrafo */
+  font-size: 1.1rem; /* Tamanho da fonte do parágrafo */
+  line-height: 1.7; /* Espaçamento entre as linhas do parágrafo para melhor leitura */
+  text-align: left; /* Alinha o texto do parágrafo à esquerda dentro do container */
+  padding: 0 20px; /* Adiciona um pouco de espaço nas laterais do parágrafo */
+  margin: 0 auto; /* Centraliza o parágrafo horizontalmente se quiser limitar a largura */
+  max-width: 800px; /* Define uma largura máxima para o parágrafo (opcional) */
+}  
+/* Estilos para a seção de produtos */
+.produtos {
+  padding: 60px 0;
+  background-color: #333; /* Cor cinza escura */
+}
+
+.produtos .container {
+  text-align: center;
+}
+
+.produtos h4 {
+  color: #d68600; /* Altera a cor do título para branco */
+  font-size: 2.9rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Dentro da seção .produtos .owl-carousel */
+.produtos .owl-carousel .item {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 460px; /* ajuste conforme a descrição mais longa */
+}
+
+.produtos .owl-carousel .item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+
+.produtos .owl-carousel .item .produto-info {
+  text-align: center;
+  /* Não defina uma altura fixa aqui para permitir que o texto flua */
+}
+
+.produtos .owl-carousel .item .produto-info h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  min-height: 50px; /* força o nome a ocupar a mesma altura */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ou flex-start se preferir à esquerda */
+  text-align: center;
+}
+.produtos .owl-carousel .item .produto-info p {
+  color: #666; /* Mantém a cor da descrição */
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Adicione esta regra para garantir uma altura mínima para os itens */
+.produtos .owl-carousel {
+  /* Ajuste este valor conforme a maior quantidade de texto em seus produtos */
+  min-height: 400px; /* Exemplo de altura mínima */
+}
+
+
+/* Estilos para as setas de navegação do Owl Carousel */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+  background: rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important;
+  font-size: 2rem !important;
+  padding: 10px 15px !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.owl-nav button.owl-prev:hover,
+.owl-nav button.owl-next:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc !important;
+  margin: 0 5px;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.owl-dots button.active {
+  background: #e38f10 !important; /* Cor do dot ativo */
+}
+/* Estilos para a seção "Por que nos escolher?" */
+.porque-escolher {
+  font-size: 8rem;
+  background-color: #222; /* Cor de fundo escura (similar à imagem) */
+  color: #fff; /* Cor do texto branco */
+  padding: 80px 0; /* Espaçamento superior e inferior */
+  text-align: center; /* Centraliza o texto principal */
+}
+
+.porque-escolher .subtitulo {
+  color: #ccc; /* Cor do subtítulo */
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-right: 90px;
+}
+
+.porque-escolher .motivos-lista {
+  display: flex; /* Alinha os motivos horizontalmente */
+  justify-content: space-around; /* Espaçamento igual entre os motivos */
+  flex-wrap: wrap; /* Permite que os motivos quebrem para a próxima linha em telas menores */
+  max-width: 1200px; /* Largura máxima para os motivos */
+  margin: 0 auto; /* Centraliza a lista de motivos */
+  padding: 0 20px; /* Adiciona um pouco de espaço nas laterais em telas menores */
+}
+
+.porque-escolher .motivo {
+  text-align: center; /* Centraliza o conteúdo de cada motivo */
+  padding: 20px;
+  max-width: 250px; /* Largura máxima para cada motivo */
+}
+
+.porque-escolher .numero {
+  color: #e38f10; /* Cor laranja do número */
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block; /* Garante que o número ocupe a largura total */
+}
+
+.porque-escolher .titulo-motivo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.porque-escolher .descricao-motivo {
+  font-size: 0.9rem;
+  color: #dddddda9;
+  line-height: 1.5;
+  margin-left: -40px;
+
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .porque-escolher .motivos-lista {
+    flex-direction: column; /* Empilha os motivos em telas menores */
+    align-items: center; /* Centraliza os itens em coluna */
+  }
+
+  .porque-escolher .motivo {
+    margin-bottom: 40px; /* Adiciona espaço entre os motivos empilhados */
+    max-width: 80%; /* Aumenta a largura dos motivos em telas menores */
+  }
+}
+/* Estilos para a seção "Perguntas Frequentes" */
+.perguntas-frequentes  {
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  padding: 80px 0; /* Espaçamento superior e inferior */
+  text-align: center; /* Centraliza o texto principal */
+  font-size: 5rem;
+  font-family: 'Lobster'
+}
+
+.perguntas-frequentes .subtitulo {
+  color: #777; /* Cor do subtítulo */
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.perguntas-frequentes .faq-lista {
+  display: grid; /* Cria um layout de grade */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+  gap: 30px; /* Espaçamento entre os itens da grade */
+  max-width: 1200px; /* Largura máxima para a lista de perguntas */
+  margin: 0 auto; /* Centraliza a lista */
+  padding: 0 20px; /* Espaçamento nas laterais em telas menores */
+}
+
+.perguntas-frequentes .pergunta-resposta {
+  background-color: #fff; /* Fundo branco para cada pergunta/resposta */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Leve sombra */
+  text-align: left; /* Alinha o texto dentro de cada item à esquerda */
+}
+
+.perguntas-frequentes .pergunta {
+  color: #333; /* Cor da pergunta */
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.perguntas-frequentes .resposta {
+  color: #666; /* Cor da resposta */
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Seus outros estilos CSS começam aqui */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ... */
+.cta-degustacao {
+  background-color: #F2A331;
+  padding: 40px;
+  text-align: center;
+}
+
+.cta-degustacao h8 {
+  color: #2E2E2E;
+  font-size: 5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.cta-degustacao p {
+  color: #2E2E2E;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.botao-whatsapp {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block; /* Para que as propriedades de padding e border-radius funcionem corretamente */
+}
+
+.botao-whatsapp:hover {
+  /* Adicione um efeito de hover se desejar */
+  opacity: 0.9;
+}
+.contatos {
+  background-color: #2E2E2E; /* Cor de fundo escura */
+  color: #FFFFFF; /* Cor do texto branca */
+  padding: 50px;
+  text-align: left; /* Alinhar o texto à esquerda como no print */
+  font-family: 'Merriweather', serif;
+}
+
+.contatos h9 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contatos p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.info-contato {
+  display: flex;
+  flex-direction: column; /* Organizar os itens de contato em coluna */
+  gap: 15px; /* Espaçamento entre os itens de contato */
+}
+
+.item-contato {
+  display: flex;
+  align-items: center; /* Alinhar ícone e texto verticalmente */
+  gap: 10px;
+}
+
+.item-contato img {
+  width: 20px; /* Ajuste o tamanho dos ícones conforme necessário */
+  height: auto;
+}
+
+.item-contato p {
+  margin-bottom: 0; /* Remover a margem inferior padrão do parágrafo dentro do item de contato */
+}
+
+.item-contato a {
+  color: #F2A331; /* Cor do link do email (amarelo) */
+  text-decoration: none;
+}
+
+.item-contato a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociais {
+  margin-top: 30px;
+}
+
+.redes-sociais a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.redes-sociais img {
+  width: 25px; /* Ajuste o tamanho dos ícones de redes sociais */
+  height: auto;
+  opacity: 0.7; /* Deixar os ícones um pouco transparentes */
+  transition: opacity 0.3s ease;
+}
+
+.redes-sociais img:hover {
+  opacity: 1; /* Tornar os ícones totalmente visíveis no hover */
+}
+footer {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  padding: 20px; /* Adiciona um pequeno espaçamento interno */
+  background-color: orange /* Cor de fundo clara (opcional) */
+}
+
+footer p {
+  font-size: 0.8em; /* Diminui o tamanho da fonte (experimente outros valores como 0.7em, 0.9em) */
+  color: #555; /* Altera a cor da letra para um cinza mais escuro (experimente outras cores em hexadecimal, RGB, etc.) */
+  margin: 0; /* Remove qualquer margem padrão do parágrafo para melhor controle do espaçamento */
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.social-icons a {
+  color: #ff8800e7;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
